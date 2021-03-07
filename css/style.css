@@ -112,13 +112,13 @@ header .wrapper {
 	display: flex;
 	justify-content: space-between;
 }
-header .wrapper .logo {
-	max-width: 15.1rem;
-	max-height: 5.6rem;
+header .wrapper .logo, footer .wrapper .logo {
+	max-width: 20.9rem;
+	max-height: 5rem;
 	/* margin-right: 11.2rem; */
 	text-decoration: none;
 }
-header .wrapper .logo h1{
+header .wrapper .logo h1, footer .wrapper .logo h1 {
 	color: var(--color-white);
 
 }
@@ -749,6 +749,8 @@ header .wrapper .header-content .header-menu .header-socials a img {}
 .warranty .warranty-container .warranty-left-part .warranty-img-box{
 	/* box-shadow: -3.4rem 0 5rem 25px rgba(255, 0, 0, 30%); */
 	box-shadow: 15px 0px 8px -3px rgba(255, 0, 0, 30%);
+	position: relative;
+	z-index: 10;
 
 }
 .warranty .warranty-container .warranty-left-part .warranty-img-box img{
@@ -794,5 +796,228 @@ header .wrapper .header-content .header-menu .header-socials a img {}
 	font-size: 2rem;
 	line-height: 2.4rem;
 }
+
+/* ---------- ---------- */
+
+/* ---------- Form section----------  */
+.form-section {
+	background-color: var(--color-white);
+	padding: 26.5rem 0 12rem;
+	position: relative;
+	overflow: hidden;
+}
+.form-section .wrapper{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+.form-section .wrapper .form-title{
+	font-size: 4.8rem;
+	line-height: 5.8rem;
+	color: var(--text-color);
+	margin-bottom: 2.8rem;
+	max-width: 75.8rem;
+}
+.form-section .wrapper .form-text{
+	font-weight: 700;
+	font-size: 2.4rem;
+	line-height: 2.9rem;
+	color: var(--text-color);
+	margin-bottom: 5.6rem;
+}
+.form-section .wrapper .form{}
+.form-section .wrapper .form .form-group{
+	min-width: 67.2rem;
+	font-family: 'Raleway', sans-serif;
+	font-size: 2rem;
+	font-weight: 500;
+	line-height: 2.4rem;
+}
+.form-section .wrapper .form .form-group .custom-checkbox{
+	position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.form-section .wrapper .form .form-group .custom-checkbox + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+.form-section .wrapper .form .form-group .custom-checkbox + label::before {
+  content: '';
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #000;
+  border-radius: .4rem;
+  margin-right: 1.2rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+.form-section .wrapper .form .form-group .custom-checkbox:checked + label::before {
+  border-color: #000;
+  background-color: #fff;
+  background-image: url(../img/checkmark.svg);
+	background-size: 1.2rem;
+}
+.form-section .wrapper .form .form-group .form-input{
+	padding: 2.1rem 0 2.1rem 4rem;
+	border-radius: .8rem;
+	width: 100%;
+	border: .1rem solid #979797;
+}
+.form-section .wrapper .form .form-group .form-input::placeholder{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+	font-size: 1.8rem;
+	line-height: 2.4rem;
+}
+.form-section .wrapper .form .form-group .form-textarea{
+	width: 100%;
+	border-radius: .8rem;
+	padding: 1.7rem 0 1.7rem 4rem;
+	height: 12.7rem;
+}
+.form-section .wrapper .form .form-group .form-textarea::placeholder{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+	font-size: 1.8rem;
+	line-height: 2.4rem;
+}
+.form-section .wrapper .form .form-group .form-label {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+	font-size: 1.8rem;
+	line-height: 2.1rem;
+	color: #000;
+}
+.form-section .wrapper .form .form-group .form-label a{
+	color: #0c5dff;
+}
+.form-section .wrapper .form .form-group .form-button{
+	padding: 1.6rem 3.8rem 2rem 3.2rem;
+	width: 100%;
+	max-width: 41.6rem;
+	font-size: 2.4rem;
+	line-height: 2.9rem;
+}
+.form-section .wrapper .form .form-group:nth-child(4) {
+	text-align: left;
+	margin-bottom: 4rem;
+}
+.form-section .wrapper .form .form-group:not(:nth-child(4)) {
+	margin-bottom: 1.6rem;
+}
+.form-section .background-image-left, .form-section .background-image-right{
+	position: absolute;
+	top: 22rem;
+}
+.form-section .background-image-left{
+	left: -7rem;
+}
+.form-section .background-image-right{
+	right: -7rem;
+}
+/* ---------- ---------- */
+
+/* ---------- Footer section----------  */
+footer {
+	background-color: #111;
+	padding: 4rem 0 8rem;
+	color: var(--color-white);
+}
+footer .wrapper{
+
+}
+footer .wrapper .logo {
+	margin-right: 5.9rem;
+}
+footer .wrapper .top{
+	display: flex;
+	padding-bottom: 49px;
+	border-bottom: 2px solid #fff;
+}
+footer .wrapper .top .items{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+footer .wrapper .top .items .left{
+	display: flex;
+	/* width: 200px; */
+	align-items: center;
+}
+footer .wrapper .top .items .left .footer-button{
+	max-width: 21.2rem;
+	/* width: 100%; */
+	padding: 1rem 2.9rem 1.2rem 2.3rem;
+	border: .1rem solid #fff;
+}
+
+footer .wrapper .top .items .right{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+footer .wrapper .top .items .right .footer-mobile{
+	font-size: 2.4rem;
+	line-height: 2.9rem;
+	color: var(--color-white);
+	display: flex;
+	flex-direction: column;
+	margin-right: 3.3rem;
+}
+footer .wrapper .top .items .right .footer-mobile a{
+	color: var(--color-white);
+	text-decoration: none;
+	margin-bottom: .8rem;
+}
+footer .wrapper .top .items .right .footer-mobile p{
+	align-self: flex-end;
+}
+footer .wrapper .top .items .right .footer-socials{}
+footer .wrapper .top .items .right .footer-socials a{}
+footer .wrapper .top .items .right .footer-socials a:first-child{
+	margin-right: 1.7rem;
+}
+footer .wrapper .top .items .right .footer-socials a img{
+	width: 5.6rem;
+	height: 5.6rem;
+}
+footer .wrapper .bottom{
+	padding-top: 40px;
+	padding-bottom: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 1.8rem;
+	line-height: 2.2rem;
+}
+footer .wrapper .bottom a{
+	color: var(--color-white);
+	text-decoration: none;
+}
+footer .wrapper .bottom span{}
+footer .wrapper .bottom .up{
+	display: flex;
+	background-color: var(--accent-color);
+	width: 4rem;
+	height: 4rem;
+	/* align-items: center; */
+	background-image: url(../img/arrow.svg);
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-position: center;
+	border-radius: 100%;
+	/* position: absolute; */
+	/* top: 42%; */
+	cursor: pointer;
+	transform: rotate(90deg);
+}
+
 
 /* ---------- ---------- */
