@@ -85,6 +85,12 @@ body {
 	cursor: pointer;
 	white-space: nowrap;
 }
+
+.button:hover {
+	color: var(--accent-color);
+	background-color: var(--color-white);
+	border: .1rem solid var(--accent-color);
+}
 /* Pulse animation */
 @keyframes animate {
 	0% {
@@ -225,6 +231,9 @@ header .wrapper .header-content .header-menu .header-socials a img {}
 	border: .1rem solid #707070;
 	border-radius: .8rem;
 }
+.services .wrapper .card-box .card:hover{
+	border-color: var(--accent-color);
+}
 .services .wrapper .card-box .card .card-inner{
 	display: flex;
 	justify-content: space-between;
@@ -301,6 +310,9 @@ header .wrapper .header-content .header-menu .header-socials a img {}
 	font-weight: 500;
 	font-size: 2rem;
 	line-height: 2.4rem;
+}
+.about-us .wrapper .about-us-left .about-us-left-text > p .read-more{
+	display: none;
 }
 .about-us .wrapper .about-us-left .about-us-left-text p:not(:last-child){
 	margin-bottom: 1.6rem;
@@ -654,6 +666,10 @@ header .wrapper .header-content .header-menu .header-socials a img {}
 	padding: 1.4rem 4rem 1.7rem 3.8rem;
 	white-space: nowrap;
 }
+.reviews .wrapper .product-slider .reviews-slider .reviews-slide .reviews-slide-button:hover{
+	background-color: var(--accent-color);
+	color: var(--color-white);
+}
 .reviews .wrapper .product-slider .reviews-slider .reviews-slide .reviews-slide-arrow-left, .reviews .wrapper .product-slider .reviews-slider .reviews-slide .reviews-slide-arrow-right {
 	display: flex;
 	background-color: var(--accent-color);
@@ -710,6 +726,7 @@ header .wrapper .header-content .header-menu .header-socials a img {}
 	/* padding: 0 9.5rem; */
 	padding: 0 0 0 69rem;
 }
+
 .warranty .warranty-container .warranty-mobile-pic {
 	display: none;
 }
@@ -719,10 +736,19 @@ header .wrapper .header-content .header-menu .header-socials a img {}
 }
 .warranty .warranty-container .warranty-left-part .warranty-img-box{
 	/* box-shadow: -3.4rem 0 5rem 25px rgba(255, 0, 0, 30%); */
-	box-shadow: 15px 0px 8px -3px rgba(255, 0, 0, 30%);
 	position: relative;
 	z-index: 10;
-
+}
+.warranty .warranty-container .warranty-left-part .warranty-img-box::after{
+	content: '';
+	height: 33rem;
+	width: 3rem;
+	box-shadow: 15px 0px 8px 2px rgb(255 0 0 / 30%);
+	position: absolute;
+	right: 0;
+	top: 8rem;
+	display: block;
+	z-index: -1;
 }
 .warranty .warranty-container .warranty-left-part .warranty-img-box img{
 	border-radius: 3.2rem;
@@ -730,6 +756,7 @@ header .wrapper .header-content .header-menu .header-socials a img {}
 	max-height: 49rem;
 	height: 100%;
 }
+
 .warranty .warranty-container .warranty-right-part{
 	margin-left: auto;
 }
@@ -1401,6 +1428,14 @@ footer .wrapper .bottom .up{
 		font-size: 1.2rem;
 		line-height: 1.4rem;
 		max-width: 22.4rem;
+	}
+	.about-us .wrapper .about-us-left .about-us-left-text .hidden-text {
+		display: none;
+	}
+	.about-us .wrapper .about-us-left .about-us-left-text > p .read-more{
+		display: inline-flex;
+		color: #1F71FF;
+		text-decoration: underline;
 	}
 }
 

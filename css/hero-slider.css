@@ -68,10 +68,10 @@
 	min-height: 52.8rem;
 }
 .hero-section .wrapper .main-slider .slider .slides .slide.show .slide-text .slide-text-primary {
-	animation: focus-in 8s both linear;
+	animation: focus-in 3s both linear;
 }
 .hero-section .wrapper .main-slider .slider .slides .slide.show .slide-text .slide-text-secondary {
-	animation: focus-in 8s 0.5s both linear;
+	animation: focus-in 3s 0.5s both linear;
 }
 
 @keyframes focus-in {

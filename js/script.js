@@ -1,8 +1,13 @@
 const mainSlider = document.querySelector('.main-slider');
 const mainSliderItems = mainSlider.querySelectorAll('.slides .slide');
+
 const backToTopButton = document.querySelector('.up');
+
 const checkInput = document.querySelector('input[name="option"]');
 const disableBtn = document.querySelector('.form .form-group .form-button');
+
+const readMoreBtn = document.querySelector('.read-more');
+let hiddenText = document.querySelectorAll('.hidden-text');
 
 // Reviews slider
 function getProductSlider() {
@@ -108,41 +113,13 @@ checkInput.addEventListener('change', () => {
         disableBtn.setAttribute('disabled', 'true');
     }
 });
-// console.log(disableBtn)
-// function switchSlide () {
-//     // documentument.querySelector('.main-slider .slide').classList.add('show');
-//     setTimeout(function () {
-// 			for(let i = 0; i < 3; i++) {
-// 				setInterval(() => {
-// 					mainSliderItems.classList.add('show');
-// 				}, 5000);
-// 			}
-// 			// mainSliderItems[i].classList.remove('show');
-//     }, 3000)
-// }
 
-// switchSlide();
-
-// let delay = 0;
-// let siblings = Array.prototype.slice.call(el.parentNode.children);
-
-// console.log(siblings);
-// cicle();
-
-// function cicle () {
-//   for (let i = 0; i < mainSliderItems.length; i++) {
-//     checker( mainSliderItems[i], delay );
-//     delay += 10000;
-
-//     if (mainSliderItems.length - i === 1) cicle();
-//   }
-// }
-
-// function checker (elem, delay) {
-//   setTimeout( function() {
-//     mainSliderItems.classList.add('active').siblings.removeClass('active');
-//   }, delay);
-// }
+// Readmore
+readMoreBtn.addEventListener('click', () => {
+    for(item of hiddenText) {
+        item.style.display = 'flex';
+    }
+})
 
 
 // Modal windows
@@ -152,6 +129,7 @@ for (let item of customer) {
         document.querySelector('#customer').style.display = 'flex';
     });
 }
+
 let closeWin = document.querySelectorAll('.window-background');
 for (let item of closeWin) {
     item.onclick = function () {
@@ -160,6 +138,7 @@ for (let item of closeWin) {
         }
     }
 };
+
 let reviews = document.querySelectorAll('.reviews .reviews-slider .reviews-slide');
 for (let item of reviews) {
     item.querySelector('button').addEventListener('click', function () {
